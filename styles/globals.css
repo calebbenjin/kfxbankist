@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.bg-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 97, 215, 1) 0%,
+    rgba(0, 200, 255, 1) 100%
+  );
+}
+
+.selectWrap {
+  max-height: 200px;
+  width: auto;
+  overflow: auto;
+}
+
+img {
+  /* width: 100%; */
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+
+::selection {
+  background-color: #47a3f3;
+  color: #fefefe;
+}
+
+html {
+  min-width: 360px;
+  scroll-behavior: smooth;
+}
+
+/* Remove Safari input shadow on mobile */
+input[type='text'],
+input[type='email'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+table {
+  display: block;
+  max-width: fit-content;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+
+.core-btn {
+  /* border-radius: 6px; */
+  color: #fff;
+  white-space: nowrap;
+}
+
+.core-rounded-btn {
+  border-radius: 33px;
+  white-space: nowrap;
+}
+
+.dashboardCard {
+  position: relative;
+  height: 30vh;
+  margin-top: 2rem;
+  background: transparent;
+}
+
+.amountCard {
+  position: absolute;
+  bottom: -2rem;
+  width: 100%;
+}
+
+.adsCard {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url('/bgadmin.jpeg');
+  background-position: center;
+  background-size: cover;
+}
+.adsCard2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url('/img6.jpeg');
+  background-position: center;
+  background-size: cover;
+}
+
+.dashboardHero {
+  height: 28vh;
+  position: relative;
+  /* margin-top: 3rem;
+  padding-top: 1rem; */
+}
+
+@media (max-width: 800px) {
+  .heroMetrics {
+    background: #fff;
+    width: 90%;
+  }
+}
+
+.heroMetrics {
+  position: absolute;
+  bottom: -3rem;
+  right: 0;
+  left: 0;
+  width: 80%;
+  background-size: 400px 80px;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1024px) {
+  .heroMetrics {
+    background: #fff;
+    width: 90%;
+  }
+}
