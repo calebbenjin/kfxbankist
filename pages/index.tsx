@@ -20,7 +20,7 @@ export default function Home() {
         <MobileDownloadSection />
         <FeatureSection />
         <CardSection />
-        <LatestTractionsSection />
+        {/* <LatestTractionsSection /> */}
         <TrackMoneySection />
         <Footer />
       </Layout>

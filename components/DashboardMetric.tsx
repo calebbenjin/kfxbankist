@@ -23,7 +23,7 @@ const DashboardMetric = ({ title, acctNumber, status, value, icon, currency }: M
 
   return (
     <>
-    <div className="bg-white mx-auto heroMetrics text-left rounded-lg shadow-lg py-6 px-6  sm:px-8 border-t-4 border-gray-800">
+    <div className="bg-white mx-auto heroMetrics text-left py-6 px-6  sm:px-8 border-t-4 border-gray-800">
       <div>
         <div className="flex items-center justify-between w-full">
           <p className="text-gray-600 capitalize text-sm md:text-lg font-semibold">

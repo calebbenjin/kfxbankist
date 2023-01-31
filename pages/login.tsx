@@ -53,68 +53,70 @@ const LoginPage = () => {
 
 
   return (
-    <Section>
-      <MobileBackNav />
-      <div className="flex items-center justify-center mx-auto sm:w-3/6">
-        <div className="container w-full sm:w-500 mx-auto sm:pt-10">
-          <h2 className='font-bold text-4xl sm:text-4xl text-left my-4'>Welcome back</h2>
-          <p className='font-semibold text-md text-left text-gray-400 my-2'>Sign in to continue</p>
-          <Formik
-            initialValues={{
-              email: '',
-              password: ''
-            }}
-            onSubmit={values =>
-              submitCredentials(values)
-            }
-            validationSchema={LoginSchema}
-          >
-            {() => (
-              <Form className="mt-8">
-                {loginSuccess && (
-                  <FormSuccess text={loginSuccess} />
-                )}
-                {loginError && (
-                  <FormError text={loginError} />
-                )}
-                <div>
-                  <div className="mb-2">
-                    <div className="mb-1">
-                      <Label text="Email" />
-                    </div>
-                    <FormInput
-                      ariaLabel="Email"
-                      name="email"
-                      type="text"
-                      placeholder="Email"
-                    />
-                  </div>
+    <Layout>
+      <Section>
+        <MobileBackNav />
+        <div className="flex items-center justify-center mx-auto sm:w-3/6">
+          <div className="container w-full sm:w-500 mx-auto sm:pt-10">
+            <h2 className='font-bold text-4xl sm:text-4xl text-left my-4'>Welcome back</h2>
+            <p className='font-semibold text-md text-left text-gray-400 my-2'>Sign in to continue</p>
+            <Formik
+              initialValues={{
+                email: '',
+                password: ''
+              }}
+              onSubmit={values =>
+                submitCredentials(values)
+              }
+              validationSchema={LoginSchema}
+            >
+              {() => (
+                <Form className="mt-8">
+                  {loginSuccess && (
+                    <FormSuccess text={loginSuccess} />
+                  )}
+                  {loginError && (
+                    <FormError text={loginError} />
+                  )}
                   <div>
-                    <div className="mb-1">
-                      <Label text="Password" />
+                    <div className="mb-2">
+                      <div className="mb-1">
+                        <Label text="Email" />
+                      </div>
+                      <FormInput
+                        ariaLabel="Email"
+                        name="email"
+                        type="text"
+                        placeholder="Email"
+                      />
                     </div>
-                    <FormInput
-                      ariaLabel="Password"
-                      name="password"
-                      type="password"
-                      placeholder="Password"
-                    />
+                    <div>
+                      <div className="mb-1">
+                        <Label text="Password" />
+                      </div>
+                      <FormInput
+                        ariaLabel="Password"
+                        name="password"
+                        type="password"
+                        placeholder="Password"
+                      />
+                    </div>
                   </div>
-                </div>
 
-                <div className="text-center">
-                  <Button
-                    type="submit"
-                    className="core-btn w-3/6 text-lg shadow-2xl mt-10 bg-brand text-gray-100 py-2 px-6 md:inline-block text-gray-50"
-                    loading={loginLoading} loadingText='Signing In...'>Log In</Button>
-                  <p className="mt-20 sm:mt-8">Don't have an account? <Link href="/register" className='text-blue font-semibold' >Create account</Link></p>
-                </div>
-              </Form>
-            )}
-          </Formik>
+                  <div className="text-center">
+                    <Button
+                      type="submit"
+                      className="core-btn w-3/6 text-lg shadow-2xl mt-10 bg-brand text-gray-100 py-2 px-6 md:inline-block text-gray-50"
+                      loading={loginLoading} loadingText='Signing In...'>Log In</Button>
+                    <p className="mt-20 sm:mt-8">Don't have an account? <Link href="/register" className='text-blue font-semibold' >Create account</Link></p>
+                  </div>
+                </Form>
+              )}
+            </Formik>
+          </div>
         </div>
-      </div>
-    </Section>
+      </Section>
+    </Layout>
   )
 }
 

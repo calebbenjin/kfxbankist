@@ -35,7 +35,8 @@ const DashboardPage = () => {
     <DashboardLayout>
       {authState ? 
       <div className="container dashboardHero bg-brand">
-        <p className="pt-10 sm:ml-10 font-semibold capitalize text-white text-lg">{`Welcome back ${authState?.firstName}`}</p>
+        <p className="pt-5 sm:ml-10 font-semibold capitalize text-white text-lg">{`Welcome back ${authState?.firstName}`}</p>
+        <p className="sm:ml-10 mt-5 capitalize text-white text-lg">Managing your money through Internet Banking is quick and secure</p>
         <div className="mb-4 bg-light-blue text-center">
           <div className="w-full bg-blue mb-4 sm:mb-0">
             <DashboardMetric
@@ -52,13 +53,13 @@ const DashboardPage = () => {
       : "Loading" }
 
 
-      <div className="container mt-16 pb-36">
+      <div className="container mt-20">
         <div className="items-center grid grid-cols-2  gap-4">
-          <Button onClick={handlePayment} className="core-btn mt-6 font-semibold mx-auto sm:w-4/6 w-full shadow-2xl bg-brand text-gray-100 py-3 px-3 sm:text-xl md:py-4 sm:px-6 flex items-center justify-between"><span>Widthdraw</span> <IoIosSend className="playstore-icon sm:ml-2 sm:h-6 sm:w-6" /> </Button>
-          <Button onClick={handleReceivePayment} className="core-btn mt-6 font-semibold mx-auto sm:w-4/6 w-full shadow-2xl bg-brand text-gray-100 sm:text-xl py-3 px-3 md:py-4 md:px-7 flex items-center justify-between"><span>Send Money</span> <IoIosSend className="playstore-icon sm:h-6 sm:w-6 sm:ml-2" /> </Button>
+          <Button onClick={handlePayment} className="core-btn mt-6 font-semibold mx-auto sm:w-4/6 w-full shadow-2xl bg-brand text-gray-100 py-3 px-3 sm:text-xl md:py-4 sm:px-6 flex items-center justify-between"><span>Transfer Money</span> <IoIosSend className="playstore-icon sm:ml-2 sm:h-6 sm:w-6" /> </Button>
+          <Button onClick={handleReceivePayment} className="core-btn mt-6 font-semibold mx-auto sm:w-4/6 w-full shadow-2xl bg-brand text-gray-100 sm:text-xl py-3 px-3 md:py-4 md:px-7 flex items-center justify-between"><span>Withdraw Money</span> <IoIosSend className="playstore-icon sm:h-6 sm:w-6 sm:ml-2" /> </Button>
         </div>
 
-          <div className="adsCard py-6 sm:py-10 sm:px-8 px-4 mt-10 rounded-lg">
+          <div className="adsCard py-6 sm:py-10 sm:px-8 px-4 mt-20 rounded-lg">
             <h3 className="sm:text-2xl text-gray-100 font-semibold capitalize">A secure way to access your accounts, manage payments, check your statements and much more, 24 hours a day.</h3>
           </div>
       </div>
