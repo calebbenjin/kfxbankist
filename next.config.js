@@ -13,7 +13,7 @@ const nextConfig = withPWA({
     styledComponents: true
   },
   env: {
-    REACT_APP_API_URL: 'https://kfxbankist-api-production.up.railway.app/api/v1/users/',
+    REACT_APP_API_URL: 'https://kfxbankist-api-production.up.railway.app/api/v1/users',
     // REACT_APP_API_URL: 'http://localhost:8080/api/v1/users/',
     NEXT_APP_API_URL: 'https://kfxbankist.vercel.app/api',
     // NEXT_APP_API_URL: 'http://localhost:3000/api',
