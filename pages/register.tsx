@@ -73,8 +73,17 @@ const RegisterPage = () => {
               initialValues={{
                 firstName: '',
                 lastName: '',
+                gender: '',
                 email: '',
                 password: '',
+                title: '',
+                address: '',
+                dob: '',
+                phone: '',
+                nationality: '',
+                accountType: '',
+                currency: '',
+                idType: ''
               }}
               onSubmit={(values) => submitCredentials(values)}
               validationSchema={SignupSchema}>
