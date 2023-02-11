@@ -5,7 +5,7 @@ const authenticate = async (req: any, res: any) => {
   try {
     if (req.method === 'POST') {
 
-      const {data} = await publicFetch.post(`authenticate`, req.body);
+      const {data} = await publicFetch.post(`/authenticate`, req.body);
   
       res.setHeader(
         'Set-Cookie',

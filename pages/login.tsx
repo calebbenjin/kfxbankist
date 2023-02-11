@@ -30,6 +30,7 @@ const LoginPage = () => {
     try {
       setLoginLoading(true);
       const {data} = await axios.post(`${process.env.NEXT_APP_API_URL}/authenticate`, credentials)
+      console.log(data)
       setLoginSuccess(data.message)
       setLoginError('')
 
